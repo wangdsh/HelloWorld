@@ -1,20 +1,20 @@
 package cn.edu.pku.helloworld;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Window;
 
+import com.bm.library.PhotoView;
 
-public class MainActivity extends AppCompatActivity {
-
-    public final static String EXTRA_MESSAGE = "cn.edu.pku.helloworld.MESSAGE";
+public class EnlargeImage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.enlarge_image);
 
+        PhotoView photoView = (PhotoView) findViewById(R.id.img);
+        photoView.enable(); // 启用图片缩放功能
     }
-
 }
